@@ -11,5 +11,11 @@
 
     <artifactId>kafka-one</artifactId>
 
+    <dependencies>
+
+
+
+
+    </dependencies>
 
 </project>

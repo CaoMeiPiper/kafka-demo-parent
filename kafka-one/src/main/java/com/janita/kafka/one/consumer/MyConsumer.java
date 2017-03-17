@@ -11,6 +11,8 @@ import kafka.consumer.KafkaStream;
 import kafka.javaapi.consumer.ConsumerConnector;
 
 public class MyConsumer {
+
+
     public static void main(String[] args) {
         String topic = "lxw1234.com";
         ConsumerConnector consumer = Consumer.createJavaConsumerConnector(createConsumerConfig());

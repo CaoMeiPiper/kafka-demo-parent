@@ -1,10 +1,14 @@
 package com.janita.kafka.two;
 
 import com.alibaba.fastjson.JSON;
+import com.janita.kafka.two.config.KafkaProps;
 import com.janita.kafka.two.entity.ClazzTotalLevel;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.kafka.core.ConsumerFactory;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
@@ -47,5 +51,21 @@ public class KafkaTwoApplicationTests {
 
         List<ClazzTotalLevel> totalLevel = JSON.parseArray(json,ClazzTotalLevel.class);
         System.out.println(totalLevel.size());
+    }
+
+    @Autowired
+    KafkaTemplate<String,String > kafkaTemplate;
+    @Autowired
+    ConsumerFactory<String,String> consumerFactory;
+
+    @Test
+    public void testKfk(){
+        kafkaTemplate.send("test-topic","hELLO Janita");
+
+    }
+
+    @Test
+    public void test2(){
+        System.out.println("\n*****"+ KafkaProps.getAutoCommitIntervalMs());
     }
 }

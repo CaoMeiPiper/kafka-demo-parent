@@ -16,6 +16,8 @@ public class KafkaOneApplicationTests {
     @Autowired
     private KafkaTemplate<String,String> kafkaTemplate;
 
+
+
     @Test
     public void kakf(){
         kafkaTemplate.send("test-topic", "hello**********");

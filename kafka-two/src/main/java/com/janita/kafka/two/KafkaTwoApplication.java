@@ -1,15 +1,14 @@
 package com.janita.kafka.two;
 
-import com.janita.kafka.two.config.KafkaProps;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.kafka.annotation.EnableKafka;
 
 /**
  * Created by Janita on 2017/3/16
  */
 @SpringBootApplication
-@EnableConfigurationProperties({KafkaProps.class})
+@EnableKafka
 public class KafkaTwoApplication {
     public static void main(String[] args) {
         SpringApplication.run(KafkaTwoApplication.class,args);

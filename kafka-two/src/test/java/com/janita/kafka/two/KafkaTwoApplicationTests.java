@@ -1,7 +1,6 @@
 package com.janita.kafka.two;
 
 import com.alibaba.fastjson.JSON;
-import com.janita.kafka.two.config.KafkaProps;
 import com.janita.kafka.two.entity.ClazzTotalLevel;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -62,10 +61,5 @@ public class KafkaTwoApplicationTests {
     public void testKfk(){
         kafkaTemplate.send("test-topic","hELLO Janita");
 
-    }
-
-    @Test
-    public void test2(){
-        System.out.println("\n*****"+ KafkaProps.getAutoCommitIntervalMs());
     }
 }

@@ -9,7 +9,6 @@
     <modules>
         <module>kafka-one</module>
 		<module>kafka-two</module>
-		<module>kafka-consumer</module>
 		<module>kafka-three</module>
 	</modules>
     <packaging>pom</packaging>

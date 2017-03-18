@@ -8,7 +8,6 @@ import org.springframework.kafka.annotation.EnableKafka;
  * Created by Janita on 2017/3/16
  */
 @SpringBootApplication
-@EnableKafka
 public class KafkaTwoApplication {
     public static void main(String[] args) {
         SpringApplication.run(KafkaTwoApplication.class,args);

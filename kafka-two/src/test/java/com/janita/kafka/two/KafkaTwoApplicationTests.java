@@ -60,7 +60,7 @@ public class KafkaTwoApplicationTests {
     @Test
     public void testKfk(){
         for (int i=0;i<4000;i++){
-            kafkaTemplate.send("test-topic","hELLO Janita"+i);
+            kafkaTemplate.send("test-topic","Hello Janita"+i);
         }
     }
 }

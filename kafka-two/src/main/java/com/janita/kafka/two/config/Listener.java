@@ -15,7 +15,7 @@ public class Listener {
         Optional<?> kafkaMessage = Optional.ofNullable(record.value());
         if (kafkaMessage.isPresent()){
             Object message = kafkaMessage.get();
-            System.out.println("\n*****Lis ten1 : "+ message);
+            System.out.println("\n*****消费消息 : "+ message);
         }
     }
 }

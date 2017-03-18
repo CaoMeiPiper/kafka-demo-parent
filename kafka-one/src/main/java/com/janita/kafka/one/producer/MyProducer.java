@@ -1,6 +1,4 @@
 package com.janita.kafka.one.producer;
-
-
 import kafka.javaapi.producer.Producer;
 import kafka.producer.KeyedMessage;
 import kafka.producer.ProducerConfig;

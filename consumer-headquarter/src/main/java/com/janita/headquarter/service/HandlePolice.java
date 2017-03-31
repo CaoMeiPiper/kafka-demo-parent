@@ -1,11 +1,11 @@
 package com.janita.headquarter.service;
 
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 /**
  * Created by Janita on 2017-03-31 15:09
  */
-@Service
+@Component
 public class HandlePolice {
 
     /**

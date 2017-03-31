@@ -10,6 +10,8 @@
         <module>kafka-one</module>
 		<module>kafka-two</module>
 		<module>kafka-three</module>
+		<module>producer-topic-police</module>
+		<module>consumer-headquarter</module>
 	</modules>
     <packaging>pom</packaging>
 
@@ -29,6 +31,7 @@
 		<java.version>1.8</java.version>
 	</properties>
 
+	<!--父项目统一注入，子modules中不用再pom中引用-->
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.kafka</groupId>

@@ -26,6 +26,7 @@ public class KafkaProducerConfig {
         props.put(ProducerConfig.LINGER_MS_CONFIG,1);
         props.put(ProducerConfig.BATCH_SIZE_CONFIG,4096);
         props.put(ProducerConfig.BUFFER_MEMORY_CONFIG,15728640);
+        //需要处理超大的消息
         props.put("max.request.size", "" + 15728640);
         props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG,StringSerializer.class);

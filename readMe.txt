@@ -9,6 +9,7 @@ http://blog.csdn.net/evankaka/article/details/52421314
 1.进入Kafka安装目录C:\kafka_2.11-0.9.0.0\
 2.按下Shift+右键，选择“打开命令窗口”选项，打开命令行。
 3.现在输入.\bin\windows\kafka-server-start.bat .\config\server.properties 并回车。
+.\bin\windows\kafka-server-start.bat .\config\server.properties
 
 
 kafka-one:是直接使用main函数直接使用，是一个基础的方法（先启动消费者，再启动生产者，参考：http://lxw1234.com/archives/2015/09/512.htm）

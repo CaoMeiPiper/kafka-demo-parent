@@ -1,6 +1,7 @@
 package com.janita.headquarter.configuration;
 
 import com.janita.headquarter.constants.Consts;
+import com.janita.headquarter.service.HandleBigJson;
 import com.janita.headquarter.service.HandleFire;
 import com.janita.headquarter.service.HandlePolice;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
@@ -18,6 +19,8 @@ public class Listener {
     private HandlePolice handlePolice;
     @Autowired
     private HandleFire handleFire;
+    @Autowired
+    private HandleBigJson handleBigJson;
 
     @KafkaListener(topics = {Consts.POLICE})
     public void listenPolice(ConsumerRecord<?,?> record){
@@ -38,6 +41,17 @@ public class Listener {
 
             System.out.println("\n总部收到火警 : "+ msg);
             handleFire.doHandleFire(msg);
+        }
+    }
+
+    @KafkaListener(topics = {Consts.BIG_JSON})
+    public void listenBigJson(ConsumerRecord<?,?> record){
+        Optional<?> kafkaMessage = Optional.ofNullable(record.value());
+        if (kafkaMessage.isPresent()){
+            String msg = (String) kafkaMessage.get();
+
+            System.out.println("\n总部收到超级大的bigJson : "+ msg);
+            handleBigJson.doHandle(msg);
         }
     }
 }

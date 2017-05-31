@@ -3,6 +3,8 @@
 http://blog.csdn.net/evankaka/article/details/52421314
 需要配置Zookeeper的环境变量
 
+只有 2.10 版本才能在windows上运行
+
 
 运行Kafka服务器
 重要：请确保在启动Kafka服务器前，Zookeeper实例已经准备好并开始运行。

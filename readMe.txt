@@ -13,6 +13,8 @@ http://blog.csdn.net/evankaka/article/details/52421314
 3.现在输入.\bin\windows\kafka-server-start.bat .\config\server.properties 并回车。
 .\bin\windows\kafka-server-start.bat .\config\server.properties
 
+.\bin\windows\kafka-server-start.bat .\config\server.properties
+
 
 kafka-one:是直接使用main函数直接使用，是一个基础的方法（先启动消费者，再启动生产者，参考：http://lxw1234.com/archives/2015/09/512.htm）
 kafka-two:使用springboot不使用配置文件的方式使用

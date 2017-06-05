@@ -47,6 +47,9 @@ public class KafkaConsumerConfig {
         props.put(ConsumerConfig.GROUP_ID_CONFIG,"test-group");
         props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG,"latest");
 
+        //消费大数据
+        props.put(ConsumerConfig.MAX_PARTITION_FETCH_BYTES_CONFIG,15725640 );
+
         return props;
     }
 
